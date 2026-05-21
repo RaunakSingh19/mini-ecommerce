@@ -1,4 +1,5 @@
 import "./Hero1.css";
+import { Link } from "react-router-dom";
 
 const Hero1 = () => {
   return (
@@ -14,10 +15,12 @@ const Hero1 = () => {
           Experience the art of fine dining from the comfort of your home. 
           Freshly sourced, chef-prepared, and delivered in under 30 minutes.
         </p>
+        
         <div className="hero-btns">
-          <button className="btn-primary">Explore Menu</button>
+              <Link to="/menu"><button className="btn-primary" >Explore Menu</button></Link>
           <button className="btn-secondary">Learn More</button>
         </div>
+
       </div>
     </section>
   );
