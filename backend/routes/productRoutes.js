@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-
+const Product = require('../models/Product');
 const upload = require(
   "../middleware/upload"
 );
@@ -26,6 +26,22 @@ router.put("/:id", updateProduct);
   
 router.delete("/:id", deleteProduct);
 
+router.patch('/:id/active', async (req, res) => {
+  const { isActive } = req.body;
+  try {
+    const prod = await Product.findByIdAndUpdate(
+      req.params.id,
+      { isActive: !!isActive },
+      { new: true }
+    );
+    if (!prod) return res.status(404).json({ message: "Not found" });
+    res.json(prod);
+  } catch (e) {
+    res.status(500).json({ message: e.message });
+  }
+});
+
+// module.exports = router;
 // router.post("/", createProduct);
 
 module.exports = router;

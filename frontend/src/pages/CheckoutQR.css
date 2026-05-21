@@ -1,0 +1,27 @@
+/* In CheckoutQR.css, or global */
+.checkout-qr {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 34px 20px 36px 20px;
+}
+.pay-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+.pay-product {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.pay-amount {
+  margin-left: 20px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 16px 20px;
+}

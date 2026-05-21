@@ -154,6 +154,40 @@ const deleteProduct = async (
   }
 };
 
+// ...existing requires
+
+// CREATE product
+exports.createProduct = async (req, res) => {
+  try {
+    const { title, description, category, images, type, variants, vendorId } = req.body;
+    const product = new Product({
+      vendorId,
+      title,
+      description,
+      category,
+      images,
+      type,
+      variants,   // [{ name, price, options }]
+      isActive: req.body.isActive !== undefined ? req.body.isActive : true,
+    });
+    await product.save();
+    res.status(201).json(product);
+  } catch (e) {
+    res.status(400).json({ message: e.message });
+  }
+};
+// UPDATE product — similar, allow full variants update!
+exports.updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updates = req.body;
+    const product = await Product.findByIdAndUpdate(id, updates, { new: true });
+    if (!product) return res.status(404).json({ message: "Product not found" });
+    res.json(product);
+  } catch (e) {
+    res.status(400).json({ message: e.message });
+  }
+};
 
 
 module.exports = {

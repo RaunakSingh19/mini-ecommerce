@@ -12,7 +12,8 @@ import Admin from "./admin/Admin";
 import AddHero from "./admin/AddHero";
 import Menu from "./pages/Menu";
 // import Payment from "./pages/Payment"; 
-import Checkout from "./pages/Checkout";
+// import Checkout from "./pages/Checkout"; 
+import CheckoutQR from "./pages/CheckoutQR";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/admin/heroes" element={<AddHero />} />
           {/* <Route path="/payment" element={<Payment />} />  */}
-        <Route path="/checkout" element={<Checkout />} />
+        {/* <Route path="/checkout" element={<Checkout />} /> */}
+        <Route path="/checkout" element={<CheckoutQR />} />
 
         
          </Routes>

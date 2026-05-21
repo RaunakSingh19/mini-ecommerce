@@ -1,4 +1,4 @@
-.dashboard {
+/* .dashboard {
   min-height: 100vh;
 
   background: #f5f7fb;
@@ -72,4 +72,22 @@
   padding: 30px;
 
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}   
+}    */
+    .dashboard {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 2vw;
+}
+.dashboard-top {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px;
+}
+.dashboard-tabs {
+  display: flex; gap: 10px;
+}
+.dashboard-tabs .active-tab {
+  background: #2563eb; color: #fff; border-radius: 6px; font-weight: bold; padding: 6px 16px;
+}
+.dashboard-content {
+  margin-top: 15px;
+}
