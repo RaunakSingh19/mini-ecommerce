@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import UploadScreenshot from "../components/UploadScreenshot";
 import { buildWhatsAppOrderMessage } from "../utils/whatsappBuilder";
 import "./CheckoutQR.css";
+import qrImage from "../assets/qr.jpeg";
 
 export default function CheckoutQR() {
   const { state } = useLocation();
@@ -43,7 +44,12 @@ export default function CheckoutQR() {
     paymentStatus: screenshot ? "Uploaded" : "Pending",
     paymentScreenshotUrl: screenshot,
   });
-  const waURL = `https://wa.me/${process.env.REACT_APP_VENDOR_NUM}?text=${orderMsg}`;
+  // const waURL = `https://wa.me/${process.env.REACT_APP_VENDOR_NUM}?text=${orderMsg}`;
+
+  const waURL = `https://wa.me/${
+  process.env.REACT_APP_VENDOR_NUM
+}?text=${encodeURIComponent(orderMsg)}`;
+
 
   const handleCustChange = e => {
     setCustomer({ ...customer, [e.target.name]: e.target.value });
@@ -69,8 +75,8 @@ export default function CheckoutQR() {
       </div>
       {/* Static QR */}
       <div style={{margin: "48px 0 16px 0", textAlign:"center"}}><b>Scan QR and Pay</b></div>
-      <img src="/qr.png" alt="QR to pay" style={{width: 220, margin: "0 auto", display: "block", borderRadius: 12}}/>
-      {/* Screenshot Upload */}
+      <img src={qrImage}   alt="QR to pay" style={{width: 220, margin: "0 auto", display: "block", borderRadius: 12}}/>
+      {/* Screenshot Upload */} 
       <div style={{marginTop:24, marginBottom:0}}>
         <UploadScreenshot onUploaded={url => setScreenshot(url)}/>
       </div>
