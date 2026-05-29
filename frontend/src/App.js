@@ -15,6 +15,7 @@ import Menu from "./pages/Menu";
 // import Checkout from "./pages/Checkout"; 
 import CheckoutQR from "./pages/CheckoutQR";
 
+
 function App() {
   return (
     <BrowserRouter>

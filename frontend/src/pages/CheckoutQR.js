@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import React, { useState } from "react";
 import UploadScreenshot from "../components/UploadScreenshot";
 import { buildWhatsAppOrderMessage } from "../utils/whatsappBuilder";
@@ -7,7 +7,7 @@ import qrImage from "../assets/qr.jpeg";
 
 export default function CheckoutQR() {
   const { state } = useLocation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // Product is passed in state from ProductDetails
   const productLine = state?.products?.[0];

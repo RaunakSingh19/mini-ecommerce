@@ -10,6 +10,11 @@ const cloudinary = require(
   "../config/cloudinary"
 );
 
+// Verify Cloudinary is configured
+if (!cloudinary.config().cloud_name) {
+  console.error('❌ Cloudinary not properly configured. Check .env file for CLOUDINARY_* variables');
+}
+
 const storage =
   new CloudinaryStorage({
     cloudinary,
@@ -23,7 +28,7 @@ const storage =
         "jpeg",
         "webp",
       ],
-    },
+    },  
   });
 
 const upload = multer({

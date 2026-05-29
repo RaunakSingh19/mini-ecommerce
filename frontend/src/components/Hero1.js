@@ -1,6 +1,7 @@
 import "./Hero1.css";
 import { Link } from "react-router-dom";
 
+
 const Hero1 = () => {
   return (
     <section className="hero">
@@ -17,8 +18,8 @@ const Hero1 = () => {
         </p>
         
         <div className="hero-btns">
-              <Link to="/menu"><button className="btn-primary" >Explore Menu</button></Link>
-          <button className="btn-secondary">Learn More</button>
+              <Link to="/menu"><button className="btn-primary-h1" >Explore Menu</button></Link>
+          <button className="btn-secondary-h1">Learn More</button>
         </div>
 
       </div>

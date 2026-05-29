@@ -1,0 +1,200 @@
+.third-section-poster {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 60px 0;
+  background: #fff;
+}
+
+.poster-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.poster-text {
+  flex: 1;
+}
+
+.poster-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-left: 4%;
+}
+
+.poster-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 550px;
+  margin-left: 4%;
+}
+
+.explore-tag {
+  display: inline-block;
+  background: #000;
+  color: white;
+  padding: 12px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 4%;
+}
+
+.explore-tag:hover {
+  background: #222;
+}
+
+
+
+/* IMAGE SECTION */
+.poster-image-container {
+  flex: 1;
+  position: relative;
+
+  /* fixed frame */
+  width: 100%;
+  max-width: 500px;
+  height: 580px;
+
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+/* same image size */
+.poster-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+
+
+/* PAGINATION */
+.image-pagination {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  gap: 14px;
+
+  background: rgba(255, 255, 255, 0.92);
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  z-index: 10;
+}
+
+.image-pagination span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #777;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.image-pagination span:hover {
+  color: #000;
+}
+
+.image-pagination span.active {
+  color: #000;
+  font-weight: 700;
+}
+
+
+
+/* TABLET */
+@media (max-width: 992px) {
+  .poster-content {
+    gap: 40px;
+  }
+
+  .poster-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .poster-image-container {
+    max-width: 420px;
+    height: 500px;
+  }
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .third-section-poster {
+    max-width: 95%;
+    padding: 40px 0;
+  }
+
+  .poster-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .poster-text {
+    width: 100%;
+  }
+
+  .poster-text h1 {
+    font-size: 2rem;
+  }
+
+  .poster-description {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .poster-image-container {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+  }
+
+  .image-pagination {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 14px;
+  }
+}
+
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .poster-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .poster-description {
+    font-size: 0.9rem;
+  }
+
+  .explore-tag {
+    padding: 10px 18px;
+    font-size: 0.8rem;
+  }
+
+  .poster-image-container {
+    height: 380px;
+  }
+
+  .image-pagination span {
+    font-size: 0.8rem;
+  }
+}
