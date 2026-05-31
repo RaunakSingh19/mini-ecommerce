@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ThirdHomeSection.css';
-import bagImage1 from '../assets/images/thirdHomeSection.jpg';
+import bagImage1 from '../assets/images/5.jpg';
 import bagImage2 from '../assets/images/2.jpg';
 import bagImage3 from '../assets/images/3.jpg';
 import bagImage4 from '../assets/images/4.jpg';

@@ -4,9 +4,7 @@ import API from "../services/api";
 
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Hero1 from "../components/Hero1";
 import Footer from "../components/Footer";
-import Features from "../components/Features";
 import Category from "../components/Catogery";
 import ProductCard from "../components/ProductCard";
 import ThirdSection from '../components/ThirdHomeSection';
@@ -46,7 +44,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-        <Hero1 />
+        {/* <Hero1 /> */}
       <Hero />
 
       <Category

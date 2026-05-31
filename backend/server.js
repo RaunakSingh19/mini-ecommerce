@@ -11,9 +11,7 @@ const uploadRoutes = require("./routes/uploadRoutes");
 connectDB();
 
 const app = express();
-const heroRoutes = require(
-  "./routes/heroRoutes"
-);
+
 
 app.use(cors());
 
@@ -28,8 +26,6 @@ app.use(
   "/api/products",
   require("./routes/productRoutes")
 );
-
-app.use("/api/heroes", heroRoutes);
 
 app.use("/api/upload", uploadRoutes);
 
