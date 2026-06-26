@@ -21,8 +21,9 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [
+       "https://mini-ecommerce-gilt.vercel.app/",
       "http://localhost:3000",
-      "https://mini-ecommerce-gilt.vercel.app/",
+     
     ],
     credentials: true,
   })
