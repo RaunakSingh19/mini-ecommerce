@@ -22,7 +22,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://yourfrontend.vercel.app",
+      "https://mini-ecommerce-gilt.vercel.app/",
     ],
     credentials: true,
   })
