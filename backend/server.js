@@ -7,13 +7,27 @@ dotenv.config();
 const connectDB = require("./config/db");
 
 const uploadRoutes = require("./routes/uploadRoutes");
+const errorHandler = require( "./middleware/errorHandler");
 
 connectDB();
 
 const app = express();
+app.use(errorHandler);
+
+app.set("trust proxy", 1);
 
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://yourfrontend.vercel.app",
+    ],
+    credentials: true,
+  })
+);
+
 
 app.use(express.json());
 

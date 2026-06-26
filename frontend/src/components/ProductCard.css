@@ -129,3 +129,23 @@
 
   font-weight: 600;
 }
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.in-stock {
+  color: green;
+  font-weight: 600;
+}
+
+.out-stock {
+  color: red;
+  font-weight: 600;
+}
+
+.short-desc {
+  color: #666;
+  line-height: 1.5;
+}

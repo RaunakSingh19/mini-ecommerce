@@ -1,0 +1,114 @@
+/* ==========================================================================
+   CAFE SHOWCASE CONTAINER
+   ========================================================================== */
+.cafe-showcase-container {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background Configuration with Opacity Controls */
+.showcase-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.showcase-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Translucent dark tint acting over the image to guarantee high text contrast */
+.dark-tint {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 14, 6, 0.65); /* Rich warm brown-black tone */
+}
+
+/* ==========================================================================
+   FOUR-COLUMN SHOWCASE GRID
+   ========================================================================== */
+.showcase-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 80px 40px;
+}
+
+.showcase-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px;
+  color: #ffffff;
+}
+
+/* Thin separating lines between columns */
+.showcase-column:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Icons styling using fine golden strokes matching the screenshot layout */
+.feature-icon-wrapper {
+  color: #d4af37; /* Clean Gold Accents */
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.showcase-column:hover .feature-icon-wrapper {
+  transform: translateY(-5px);
+}
+
+.feature-title {
+  font-family: "Georgia", serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  max-width: 260px;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT adjustments
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0;
+    padding: 60px 20px;
+  }
+  
+  .showcase-column:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 50px 0;
+  }
+  
+  .showcase-column {
+    border-right: none !important;
+    padding: 0 15px;
+  }
+}

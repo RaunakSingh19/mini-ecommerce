@@ -1,0 +1,107 @@
+.about-page {
+background: #f8f5f0;
+color: #1f1f1f;
+}
+
+.about-hero {
+height: 70vh;
+position: relative;
+background:
+url("../assets/images/6.jpg")
+center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about-overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.55);
+}
+
+.about-hero-content {
+position: relative;
+z-index: 2;
+text-align: center;
+color: white;
+}
+
+.about-hero-content span {
+letter-spacing: 4px;
+color: #c7a56a;
+}
+
+.about-hero-content h1 {
+font-size: 5rem;
+margin-top: 20px;
+font-family: "Cormorant Garamond", serif;
+}
+
+.about-section,
+.dark-section {
+padding: 120px 20px;
+}
+
+.dark-section {
+background: #171717;
+color: white;
+}
+
+.about-container {
+max-width: 900px;
+margin: auto;
+}
+
+.section-label {
+color: #c7a56a;
+letter-spacing: 4px;
+font-size: 14px;
+}
+
+.about-container h2 {
+font-size: 3rem;
+margin: 20px 0 40px;
+font-family: "Cormorant Garamond", serif;
+}
+
+.about-container p {
+font-size: 20px;
+line-height: 2;
+margin-bottom: 30px;
+color: inherit;
+}
+
+.vision-section {
+padding: 140px 20px;
+background: #111;
+color: white;
+text-align: center;
+}
+
+.vision-section blockquote {
+max-width: 900px;
+margin: auto;
+font-size: 42px;
+line-height: 1.5;
+font-family: "Cormorant Garamond", serif;
+color: #c7a56a;
+}
+
+@media (max-width: 768px) {
+.about-hero-content h1 {
+font-size: 3rem;
+}
+
+.about-container h2 {
+font-size: 2.2rem;
+}
+
+.about-container p {
+font-size: 18px;
+}
+
+.vision-section blockquote {
+font-size: 28px;
+}
+}
