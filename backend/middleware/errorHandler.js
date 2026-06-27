@@ -1,23 +1,3 @@
-// const errorHandler = (
-//   err,
-//   req,
-//   res,
-//   next
-// ) => {
-//   console.error(err);
-
-//   res.status(500).json({
-//     success: false,
-//     message: err.message,
-//   }); 
-// };
-
-// module.exports = errorHandler;
-// middleware/errorHandler.js
-// ================================================================
-// FIXED ERROR HANDLER MIDDLEWARE
-// ================================================================
-
 const errorHandler = (err, req, res, next) => {
   console.error("❌ ==========================================");
   console.error("❌ ERROR HANDLER MIDDLEWARE TRIGGERED");

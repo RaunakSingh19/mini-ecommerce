@@ -17,12 +17,11 @@ app.use(errorHandler);
 app.set("trust proxy", 1);
 
 
-// app.use(cors());
+
 app.use(
   cors({
     origin: [
         process.env.REACT_APP_FRONTEND_API_URL,
-      //  "https://mini-ecommerce-gilt.vercel.app",
       "http://localhost:3000",
      
     ],
